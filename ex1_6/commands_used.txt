@@ -1,7 +1,2 @@
-docker build -t baseback . 
-docker run -v $(pwd)/logs.txt:/mydir/project/logs.txt -d -p 8000:8000 baseback
-
-Not sure if it is a Windows thing, but I had problems connecting to localhost:8000, I had to directly
-connect to the <docker-machine ip>:8000 on browser to access the site. The docker image is built from ubuntu:16.04
-and my home pc is Windows. This is why in the Dockerfile I set the FRONT_URL as the docker-machine ip:5000 (front-end address) I get when using the command
-docker-machine ip. 
+docker build -t docker-clock .
+docker run docker-clock
